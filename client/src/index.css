@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #ffe600;
+  --secondary-color: #eeeeee;
+  --tertiary-color: #3483fa;
+  --tertiary-color-hover: #1e70e0;
+  --text-color: #333;
+  --text-color-light: #666;
+  --text-color-lighter: #999;
+  --background-color: #fff;
+}
+
+body {
+  background-color: var(--secondary-color);
+  font-family: Roboto, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}

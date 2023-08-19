@@ -1,0 +1,56 @@
+.navbar {
+  background-color: var(--primary-color);
+}
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: var(--primary-color);
+}
+
+.navbarLogo {
+  padding-top: 6px;
+  background-color: var(--primary-color);
+  margin-right: 20px;
+}
+
+.formContainer {
+  width: 100%;
+}
+
+.navbarSearch {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  background-color: var(--background-color);
+}
+
+.navbarInput {
+  border: none;
+  outline: none;
+  margin-left: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  padding: 10px;
+  background-color: var(--background-color);
+  width: 100%;
+}
+
+.navbarButton {
+  border: none;
+  outline: none;
+  padding: 10px;
+  background-color: var(--secondary-color);
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .navbarContainer {
+    padding: 10px 0;
+  }
+}

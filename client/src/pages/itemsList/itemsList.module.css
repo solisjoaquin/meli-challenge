@@ -1,0 +1,23 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.listContainer {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: var(--background-color);
+}
+
+li {
+  list-style: none;
+  overflow: hidden;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-bottom: 1px solid var(--secondary-color);
+}

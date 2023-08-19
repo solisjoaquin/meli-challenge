@@ -1,0 +1,19 @@
+.productImageContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: auto;
+  width: 100%;
+}
+.productImage {
+  width: 100%;
+  max-width: 680px;
+  height: auto;
+  margin-bottom: 1rem;
+  object-fit: contain;
+}
+
+@media screen and (min-width: 768px) {
+  .productImage {
+    max-width: 500px;
+  }
+}

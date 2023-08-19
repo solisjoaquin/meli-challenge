@@ -1,0 +1,25 @@
+.productDescriptionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.productDescriptionTitle {
+  font-weight: 500;
+  font-size: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.productDescriptionText {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  color: var(--color-text-secondary);
+}
+
+@media screen and (min-width: 768px) {
+  .productDescriptionContainer {
+    width: 70%;
+  }
+}
