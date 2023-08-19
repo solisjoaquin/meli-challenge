@@ -1,4 +1,4 @@
-# MELI Challengue
+# MELI Challenge
 
 ![screen-shot](https://raw.githubusercontent.com/solisjoaquin/solisjoaquin/master/meli-challengue.png)
 
