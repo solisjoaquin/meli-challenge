@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { itemsContext } from "../../context/itemsContext";
+import { searchContext } from "../../context/searchContext";
 import { useContext } from "react";
 
 import Item from "../../components/itemList";
@@ -8,10 +9,11 @@ import Breadcrum from "../../components/breadcrum";
 
 const ItemsList = () => {
   const { items } = useContext(itemsContext);
+  const { categories } = useContext(searchContext);
 
   return (
     <main className={styles.mainContainer}>
-      <Breadcrum />
+      <Breadcrum categories={categories} />
       <div className={styles.listContainer}>
         <ul>
           {items &&

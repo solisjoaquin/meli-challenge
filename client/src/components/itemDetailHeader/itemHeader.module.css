@@ -19,6 +19,7 @@
 .productPrice {
   font-size: 46px;
   font-weight: 500;
+  display: flex;
 }
 
 .productDescription {

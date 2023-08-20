@@ -10,16 +10,16 @@ import ItemDetailImage from "../../components/itemDetailImage";
 export async function loader({ params }) {
   const response = await getItem(params.id);
   const item = response.item;
-
-  return { item };
+  const categories = response.categories;
+  return { item, categories };
 }
 
 const DetailItem = () => {
-  const { item } = useLoaderData();
+  const { item, categories } = useLoaderData();
 
   return (
     <div className={styles.mainContainer}>
-      <Breadcrum />
+      <Breadcrum categories={categories} />
       <div className={styles.productContainer}>
         <div className={styles.productTopContainer}>
           <ItemDetailImage item={item} />

@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./item.module.css";
 import Spacer from "../atoms/spacer";
 import TruckIcon from "../icons/truckIcon";
+import PriceNumber from "../priceNumber";
 
 const Item = ({ item }) => {
   return (
@@ -11,9 +12,10 @@ const Item = ({ item }) => {
       <div className={styles.itemDescription}>
         <div className={styles.itemDescriptionHeader}>
           <div className={styles.itemDescriptionPriceContainer}>
-            <div className={styles.itemDescriptionPrice}>
-              {item.price.amount}
-            </div>
+            <PriceNumber
+              price={item.price.amount}
+              className={styles.itemDescriptionPrice}
+            />
             {item.free_shipping && (
               <div className={styles.itemDescriptionShipping}>
                 <TruckIcon width="15" />
