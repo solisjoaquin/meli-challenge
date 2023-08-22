@@ -25,14 +25,4 @@ PORT: 5173
 - CSS
 - Vite
 
-### Demo
 
-**back**
-
-[deploy link](https://meli-node.onrender.com)
-
-[demo Link search="iphone" ](https://meli-node.onrender.com/items?search="iphone")
-
-**front**
-
-[link](https://meli-front.netlify.app/)
