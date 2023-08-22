@@ -1,8 +1,14 @@
 import React from "react";
 import styles from "./itemHeader.module.css";
-import Spacer from "../atoms/spacer";
+import Spacer from "../spacer";
 import PriceNumber from "../priceNumber";
 
+// Este componente muestra el header del producto en la página de detalle.
+// Ej:
+// Nuevo - 5 vendidos
+// iPhone 11 64 Gb Verde
+// $ 99.999
+// Botón "Comprar"
 const ItemHeader = ({ item }) => {
   return (
     <div className={styles.itemDescriptionHeader}>

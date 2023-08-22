@@ -3,9 +3,9 @@
   justify-content: center;
   margin-bottom: auto;
   width: 100%;
+  /* background-color: blueviolet; */
 }
 .productImage {
-  width: 100%;
   max-width: 680px;
   height: auto;
   margin-bottom: 1rem;

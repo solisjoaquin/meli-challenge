@@ -1,7 +1,9 @@
 import React from "react";
 import styles from "./itemDescription.module.css";
-import Spacer from "../atoms/spacer";
+import Spacer from "../spacer";
 
+// Este componente muestra la descripción del producto en la página de detalle. items/:id
+// Recibe como props la descripción del producto
 const ItemDescription = ({ description }) => {
   return (
     <div className={styles.productDescriptionContainer}>

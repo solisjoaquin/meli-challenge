@@ -1,6 +1,5 @@
 const axios = require("axios");
 const constants = require("../utils/constants");
-const numeral = require("numeral");
 
 const apiUrl = process.env.API_URL;
 const limitProducts = 4;
@@ -43,14 +42,28 @@ exports.getProductDetails = (productId, res) => {
     );
 };
 
+/**
+ *
+ * @param {*} response - Response from API
+ * @returns {Object} Products
+ * @returns {Object} Products.author
+ * @returns {Array} Products.categories
+ * @returns {Array} Products.items
+ *
+ */
 function formatProducts(response) {
-  const productsFormat = {};
-  productsFormat.author = getAuthor();
-  productsFormat.categories = getCategories(response.filters);
-  productsFormat.items = getItems(response.results);
-  return productsFormat;
+  const products = {};
+  products.author = getAuthor();
+  products.categories = getCategories(response.filters);
+  products.items = getItems(response.results);
+  return products;
 }
 
+/**
+ * @param {Array} filters - Filters from API
+ * @returns {Array} Categories
+ *
+ */
 const getCategories = ([firstFilter]) => {
   let categories = [];
   if (!!firstFilter.id && firstFilter.id == "category") {
@@ -61,6 +74,10 @@ const getCategories = ([firstFilter]) => {
   return categories;
 };
 
+/**
+ * @param {Array} items - Items from API
+ * @returns {Array} Items formatted for response
+ */
 const getItems = (items) => {
   return items.map((item) => {
     return {
@@ -79,6 +96,12 @@ const getItems = (items) => {
   });
 };
 
+/**
+ * @param {Object} product - Product from API
+ * @param {Object} description - Description from API
+ * @returns {Object} Product formatted for response
+ *
+ */
 const formatItemValues = (product, description) => {
   const productFormat = {};
 
@@ -103,6 +126,10 @@ const formatItemValues = (product, description) => {
   return productFormat;
 };
 
+/**
+ * @param {Number} price - Price from API
+ * @returns {Object} Object with decimals value
+ */
 const formatPrice = (price) => {
   const priceString = price.toString();
   const decimals = priceString.split(".")[1] ? priceString.split(".")[1] : 0;
@@ -112,4 +139,11 @@ const formatPrice = (price) => {
   };
 };
 
+/**
+ *
+ * @returns {Object} Author
+ * @returns {string} Author.name
+ * @returns {string} Author.lastname
+ *
+ */
 const getAuthor = () => ({ name: "Joaquin", lastname: "Solis" });

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./item.module.css";
-import Spacer from "../atoms/spacer";
+import Spacer from "../spacer";
 import TruckIcon from "../icons/truckIcon";
 import PriceNumber from "../priceNumber";
 
